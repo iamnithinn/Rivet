@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rivet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+
+        <style>
+            body {
+                background-color:#000000; 
+                font-family: 'Helvetica';
+                text-align: center;
+                margin: 50px;
+            }
+        </style>
+        <style>
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-20px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+            }
+            
+            }
+        </style>
+        <style>
+          body {
+              font-family: 'Helvetica';
+              text-align: center;
+              margin: 50px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+  
+          .header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+          }
+  
+          .side-menu {
+              width: 200px;
+              background-color: #333;
+              color: white;
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+  
+          .timer-container {
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          #timer {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff; 
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 1em;
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #05c6cd; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+  
+    </head>
+    <body>
+        <div class="header">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><img src="images/menu.png"></li>
+                    <li><img src="images/live.png" class="active"></li>
+                    <li><img src="images/video.png"></li>
+                    <li><img src="images/message.png"></li>
+                    <li><img src="images/notification.png"></li>
+                    <li><img src="images/users.png"></li>
+                    <li><img src="images/setting.png"></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="top-icons">
+                <body>
+                  <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Pomodoro Timer</title>
+                    <style>
+                      body {
+                        font-family: 'Arial', sans-serif;
+                        text-align: center;
+                        margin: 50px;
+                      }
+                      #timer {
+                        font-size: 2em;
+                        margin-bottom: 20px;
+                      }
+                      #controls {
+                        display: flex;
+                        justify-content: center;
+                      }
+                      button {
+                        font-size: 1em;
+                        margin: 0 10px;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        color: #000000;
+                      }
+                    </style>
+                  </head>
+                  <body>
+                    <h1>Pomodoro Timer</h1>
+                    <div id="timer">25:00</div>
+                    <div id="controls">
+                      <button onclick="startTimer()">Start</button>
+                      <button onclick="pauseTimer()">Pause</button>
+                      <button onclick="resetTimer()">Reset</button>
+                    </div>
+                  
+                    <script>
+                      let timer;
+                      let minutes = 25;
+                      let seconds = 0;
+                  
+                      function startTimer() {
+                        timer = setInterval(updateTimer, 1000);
+                      }
+                  
+                      function pauseTimer() {
+                        clearInterval(timer);
+                      }
+                  
+                      function resetTimer() {
+                        clearInterval(timer);
+                        minutes = 25;
+                        seconds = 0;
+                        updateDisplay();
+                      }
+                  
+                      function updateTimer() {
+                        if (minutes === 0 && seconds === 0) {
+                          clearInterval(timer);
+                          alert('Pomodoro session complete! Take a break.');
+                        } else {
+                          if (seconds === 0) {
+                            minutes--;
+                            seconds = 59;
+                          } else {
+                            seconds--;
+                          }
+                          updateDisplay();
+                        }
+                      }
+                  
+                      function updateDisplay() {
+                        const formattedMinutes = String(minutes).padStart(2, '0');
+                        const formattedSeconds = String(seconds).padStart(2, '0');
+                        document.getElementById('timer').innerText = `${formattedMinutes}:${formattedSeconds}`;
+                      }
+                    </script>
+            </div>
+                </body>
+                </div>
+                <style>
+                  .controls span {
+                      margin-right: 90px; 
+                  }
+              </style>
+              <div class="col">
+                  <div class="col-1">
+                      <img src="images/image.png" class="host-img">
+                      <div class="controls">
+                          <span><img src="images/chat.png"></span>
+                          <span><img src="images/disconnect.png"></span>
+                          <span><img src="images/call.png" class="call-icon"></span>
+                          <span><img src="images/mic.png"></span>
+                          <span><img src="images/cast.png"></span>
+                          <body>
+                            <iframe src="https://open.spotify.com/embed/album/05WYfOdYRlapM87Fy9r2rs?utm_source=generator" width="1250" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                          </body>
+                      </div>
+                  </div>
+              </div>
+                    <div class="col-2">
+                        <div class="joined">
+                            <div>
+                                
+                                    </script>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
